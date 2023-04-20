@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_product_view_form" model="ir.ui.view">
+        <field name="name">product.product.view.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <page name="general_information" position="after">
+                <page string="Specification" name="specs">
+                    <field name="attrib_value_ids" context="{'show_attribute': False}">
+                        <tree string="Variants" editable="bottom">
+                            <field name="attribute_id" attrs="{'readonly': [('id', '!=', False)]}"/>
+                            <field name="value_id" options="{'no_create_edit': True, 'color_field': 'color'}" context="{'default_attribute_id': attribute_id, 'show_attribute': False}"/>
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+</odoo>
