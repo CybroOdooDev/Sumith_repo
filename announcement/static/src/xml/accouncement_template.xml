@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+ <t t-name="AnnouncementSystray">
+     <div class="dropdown">
+  <button class="btn fa fa-microphone fa-1.5x" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"/>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <span>hi </span>
+  </div>
+</div>
+ </t>
+
+</templates>
